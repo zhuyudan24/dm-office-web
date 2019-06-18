@@ -1,0 +1,291 @@
+@import './public.css';
+
+.arrowico {
+  position: absolute;
+  transition: all .5s;
+  .icoposition(0px, 25px);
+}
+
+.icoposition(@right: right, @top: top) {
+  right: @right;
+  top: @top;
+}
+
+.user-form-dialog {
+  /deep/ .el-dialog {
+    min-width: 425px;
+  }
+
+  /*/deep/ .el-dialog__body {
+      padding: 0 20px;
+  }*/
+
+  /deep/ .el-input {
+    width: 260px;
+  }
+}
+
+.pass-form-dialog {
+  /deep/ .el-dialog {
+    min-width: 425px;
+  }
+
+  /*/deep/ .el-dialog__body {
+      padding: 0 20px;
+  }*/
+}
+
+.commom-container {
+  background: #fff;
+}
+
+.common-frame-container {
+  display: flex;
+
+  .common-right-container {
+    /*height: 690px;*/
+    background: #fff;
+    flex: 1;
+    padding: 0 24px;
+
+    .common-right-header {
+      height: 70px;
+      line-height: 70px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #606266;
+
+      .title-span {
+        color: #303133;
+        font-size: 20px;
+      }
+
+      .handle-area {
+        float: right;
+
+        .hurdle {
+          width: 1px;
+          height: 16px;
+          display: inline-block;
+          background: #DCDFE6;
+          margin: 0;
+          vertical-align: sub;
+        }
+
+        .no-bdr-btn {
+          background: none;
+          color: #409EFF;
+          border: none;
+        }
+
+        .el-button.is-disabled,
+        .el-button.is-disabled:hover,
+        .el-button.is-disabled:focus {
+          background: none;
+          color: #c0c4cc;
+        }
+      }
+    }
+
+    .tab-div {
+      margin-bottom: 20px;
+    }
+
+    .common-right-button-box {
+      padding: 8px 15px;
+      background: #EBEEF5;
+      font-size: 0;
+
+      .el-select--small {
+        width: 120px;
+        margin-right: 10px;
+      }
+
+      .el-button {
+        margin-right: 8px;
+      }
+    }
+
+    .pagination {
+      margin: 24px 0;
+      text-align: right;
+    }
+
+    .diy-table {
+      .diy-header {
+        display: flex;
+
+        .name {
+          width: 130px;
+          min-width: 130px;
+          max-width: 130px;
+        }
+
+        .phone,
+        .position {
+          width: 125px;
+          min-width: 125px;
+          max-width: 125px;
+        }
+
+        .status {
+          width: 100px;
+          min-width: 100px;
+          max-width: 100px;
+        }
+      }
+
+      .clerk-obj-li {
+        display: flex;
+        padding: 10px 0;
+        margin-bottom: 25px;
+        line-height: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .clerk-name {
+          width: 130px;
+
+          .manager {
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            line-height: 16px;
+            vertical-align: middle;
+            text-align: center;
+            background: rgba(247, 203, 39, 1);
+            border-radius: 2px;
+            color: #fff;
+            font-size: 10px;
+          }
+        }
+
+        .clerk-phone,
+        .clerk-position {
+          width: 125px;
+        }
+
+        .clerk-status {
+          width: 100px;
+
+          .status-icon {
+            width: 34px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            background: #ECF5FF;
+            border: 1px solid #D9ECFF;
+            border-radius: 4px;
+
+            &.is-active {
+              color: #409EFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.store-info {
+  flex: 1;
+  height: 690px;
+  overflow: auto;
+
+  .info-cell {
+    margin-bottom: 24px;
+    background: #fff;
+    padding-bottom: 24px;
+
+    >.title {
+      line-height: 55px;
+      text-indent: 32px;
+      border-bottom: 1px solid #E4E7ED;
+    }
+
+    .info-form {
+      padding: 24px 60px 0;
+
+      .el-form-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .el-input,
+      .el-textarea,
+      .counter {
+        width: 500px;
+
+        &.el-date-editor {
+          width: 150px;
+        }
+      }
+
+      .area-container {
+        .el-select {
+          width: 163px;
+        }
+
+        .el-input {
+          width: 160px;
+        }
+      }
+
+      .img-list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+
+        .img-li {
+          width: 148px;
+          height: 148px;
+          border-radius: 6px;
+          margin-right: 12px;
+          margin-bottom: 10px;
+          position: relative;
+
+          &.J_add-img {
+            text-align: center;
+            line-height: 150px;
+            border: 1px solid rgba(192, 204, 218, 1);
+            font-size: 23px;
+            color: #909399;
+
+            .tip {
+              position: absolute;
+              font-size: 13px;
+              bottom: -23px;
+              height: 13px;
+              line-height: 13px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+
+          .J_del-img {
+            position: absolute;
+            font-size: 20px;
+            color: #808995;
+            top: -10px;
+            right: -10px;
+            cursor: pointer;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .handle-area {
+    background: rgba(255, 255, 255, 1);
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+  }
+}
